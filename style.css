@@ -1,88 +1,109 @@
 *{
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
-/* it means that when the link is clicked it it scrolled to that section */
+
 html{
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-    background-color:black;
-    color:rgb(249, 248, 246);
+    background:black;
+    color:white;
+    overflow-x:hidden;
 }
 
+/* HEADER */
 header{
-    background-color:rgb(1, 32, 90);
-    width: 100%;
+    background-color:rgb(78,10,10);
+    width:100%;
     height:65px;
-    border-radius: 50px;
-    display: flex;
-    justify-content: space-between;
-    position: sticky;
+    border-radius:50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
     top:0;
-    z-index: 1;
+    z-index:1;
+    padding:0 20px;
 }
+
 header img{
-    width: 90px;
-    height: 70px;
+    width:90px;
+    height:70px;
 }
 
 header ul{
-    display: flex;
+    display:flex;
 }
 
 header ul li{
-    list-style: none;
-    margin: 23px;
-
+    list-style:none;
+    margin:20px;
 }
 
 header ul li a{
-    color: rgb(240, 237, 237);
-    text-decoration: none;
+    color:white;
+    text-decoration:none;
 }
 
-SECTION{
-    width: 100%;
-    height: 120vh;
+section{
+    width:100%;
+    min-height:100vh;
+    padding:50px 20px;
 }
+
+/* BANNER */
 #banner img{
-    width: 500px;
-    transition: 2s;
-
+    width:400px;
+    border-radius:50px;
+    border:5px solid rgb(85,3,3);
+    transition:0.5s;
+    margin:50px;
 }
 
 #banner img:hover{
-transform: scale(1.2);
+    transform:scale(1.1);
 }
 
 .row{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;    
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    gap:40px;
 }
 
-#banner h3{
+#banner h2{
+    color:rgb(194,44,44);
+    font-size:50px;
+    text-align:center;
+     font-family: "New Rocker", system-ui;
+    font-weight: 400;
+    font-size: 60px;
+
+
+
+}
+#banner h5{
     text-align: center;
-    font-size: xx-large;
+    font-size: medium;
+}
+#banner h2:hover{
+    text-decoration: underline;
+        transform: scale(1.2);
+
+
+}
+
+
+#banner h3{
+    text-align:center;
+    font-size:25px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 
-span {
-    display: inline-block;
-    font-family: "New Rocker", system-ui;
-    font-weight: 400;
-    font-size: 60px;
-    color: #fbfbfb;
-    text-shadow: 2px 2px 5px rgb(44, 48, 85);
-    transition: transform 0.5s ease;
-}
-
-span:hover {
-    transform: scale(0.9);
-}
 #banner p{
     text-align: center;
     padding-top: 25px;
@@ -90,400 +111,293 @@ span:hover {
   font-weight: 400;
   font-size: 40px;
 }
-
-#banner h1:hover{
-    text-decoration: underline;
-        transform: scale(1.2);
-
-
+.btn-group{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    margin-top:40px;
 }
 
-#banner h1{
-font-family: "Kumar One", serif;
-  font-weight: 400;}
+#banner button{
+    padding:15px 25px;
+    background-color:rgb(152,1,1);
+    color:white;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+}
 
+#banner button:hover{
+    background-color:rgb(110,0,0);
+}
+
+/* ABOUT */
 #banner2 img{
-    width: 700px;
-    height: 600px;
-    background-color: black;
+    width:500px;
+    border:5px solid rgb(85,3,3);
+    transition: 1s;
 }
 
-
-#banner2 p{
-    text-align: justify;
-    margin: 20px;
-
+#banner2 img:hover{
+transform: scaleX(1.1);
 }
 
 #banner2 p{
-    width: 500px;
-    font-size: larger;
+    width:600px;
+    font-size:18px;
+    text-align:justify;
 }
 
-#banner2 h3{
-    font-size: xx-large;
+h1,h3,h4{
+    text-align:center;
+    padding-top:20px;
 }
 
-h1,h3{
-    padding-top: 30px;
-   text-align: center;
-    font-family: "Black Ops One", system-ui;
+/* TECH SECTION */
 
+
+#tech h1{
+    margin-bottom:50px;
 }
-
 
 .row1{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
 }
 
 .col1{
-    width:200px;
-    height: 70px;
-    background-color: rgb(28, 107, 210);
-    margin : 0 60px ;
-    color: rgb(252, 246, 246);
-    text-align: center;
-    font-size: larger;
-    border-radius: 60px;
-    background: #061465;
-    box-shadow:  15px 15px 30px #c1c1c1,
-                 -15px -15px 30px #ffffff;
-    transition: 1s;
-
+    width:280px;
+    height:180px;
+    padding:30px;
+    background:rgba(117, 2, 2, 0.8);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:20px;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:20px;
+    transition:0.3s;
 }
 
-#tech .col1:hover{
-    transform: scale(1.5);
+.col1:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(142, 30, 30, 0.25);
 }
 
-#tech i{
-
-    padding-top:27px;
-    font-size:x-large;
+.col1 i{
+    font-size:45px;
 }
 
+.col1 p{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.fa-html5{color:#f97316;}
+.fa-css3-alt{color:#3b82f6;}
+.fa-js{color:#facc15;}
+.fa-bootstrap{color:#a855f7;}
+.fa-react{color:#22d3ee;}
+.fa-angular{color:#ef4444;}
+.fa-node{color:#22c55e;}
+
+/* PROJECT */
 #project p{
-    padding-top: 25px;
-font-family: "Felipa", serif;}
+    padding-top:25px;
+}
 
 .col2{
- border: 2px solid white;   
- margin: 15px;
+    border:2px solid white;
+    margin:15px;
 }
 
-.flip-box {
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+/* FLIP BOX */
+.flip-box{
+    background-color:transparent;
+    width:300px;
+    height:200px;
+    border:1px solid #f1f1f1;
+    perspective:1000px;
 }
 
-/* This container is needed to position the front and back side */
-.flip-box-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+.flip-box-inner{
+    position:relative;
+    width:100%;
+    height:100%;
+    text-align:center;
+    transition:transform 0.8s;
+    transform-style:preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-box:hover .flip-box-inner {
-  transform: rotateY(180deg);
+.flip-box:hover .flip-box-inner{
+    transform:rotateY(180deg);
 }
 
-/* Position the front and back side */
-.flip-box-front, .flip-box-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
+.flip-box-front,
+.flip-box-back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    backface-visibility:hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
-.flip-box-front {
-  background-color: #bbb;
-  color: black;
+.flip-box-front{
+    background:#bbb;
+    color:black;
 }
 
-/* Style the back side */
-.flip-box-back {
-  background-color: rgb(2, 22, 42);
-  color: white;
-  transform: rotateY(180deg);
+.flip-box-back{
+    background:rgb(122, 2, 2);
+    color:white;
+    transform:rotateY(180deg);
 }
 
+/* SERVICE */
 #service img{
     width:200px;
-    height: 200px;
-    border-radius: 100%;
+    height:200px;
+    border-radius:50%;
+}
+#service .row1{
+    gap: 70px;
 }
 .col3{
     width:200px;
     height:150px;
 }
-
-h4{
-    text-align: center;
+#service h4{
+    color: #ef4444;
+     font-family: "New Rocker", system-ui;
+  font-weight: 400;
 }
 
 #service p{
-    text-align: justify;
-    padding-top: 20px;
+    text-align:justify;
+    padding-top:20px;
 }
 
-
-#service h1,h4{
-    padding-top: 20px;
-    margin-bottom: 15px;
+#service h1{
+    margin-bottom: 50px;
 }
 
-#service .row1{
-    height: auto;
-    margin-top: 0;
+#service img:hover{
+ transform: scale(1.2);
 }
 
-h1{
-    padding-bottom: .5em;
-}
-/* From Uiverse.io by DavidTM96 */ 
-.form {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  font-family: inherit;
-  gap: 10px;
-  padding-inline: 2em;
-  padding-bottom: 0.1em;
-  background-color: #171717;
-  background-color: #0a192f;
-  border-radius: 20px;
-  
-}
-
-.form-heading {
-  text-align: center;
-  margin: 2em;
-  color: #edd689;
-  font-size: 1.2em;
-  background-color: transparent;
-  align-self: center;
-}
-
-.form-field {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5em;
-  border-radius: 10px;
-  padding: 0.6em;
-  border: none;
-  outline: none;
-  color: white;
-  background-color: #171717;
-  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
-}
-
-.input-field {
-  background: none;
-  border: none;
-  outline: none;
-  width: 100%;
-  color: #ccd6f6;
-  padding-inline: 1em;
-}
-
-.sendMessage-btn {
-  cursor: pointer;
-  margin-bottom: 3em;
-  padding: 1em;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  color: #64ffda;
-  font-weight: bold;
-  outline: 1px solid #64ffda;
-  transition: all ease-in-out 0.3s;
-}
-
-.sendMessage-btn:hover {
-  transition: all ease-in-out 0.3s;
-  background-color: #64ffda;
-  color: #000;
-  cursor: pointer;
-  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
-}
-
-.form-card1 {
-  background-image: linear-gradient(163deg, #cfe49d 0%, #64ffda 100%);
-  border-radius: 22px;
-  transition: all 0.3s;
-}
-
-.form-card1:hover {
-  box-shadow: 0px 0px 30px 1px beige;
-}
-
-.form-card2 {
-  border-radius: 0;
-  transition: all 0.2s;
-}
-
-.form-card2:hover {
-  transform: scale(0.98);
-  border-radius: 20px;
-}
+/* CONTACT */
 #contact{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 20px;
-    padding-bottom: 50px; /* not 2000px */
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 .form-card1{
-    width: 350px; /* adjust size as needed */
+    width:350px;
+    background-image:linear-gradient(163deg,#cfe49d 0%,#64ffda 100%);
+    border-radius:22px;
 }
 
+.form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    padding:2em;
+    background:#530202;
+    border-radius:20px;
+}
+
+.form-heading{
+    text-align:center;
+    color:#edd689;
+}
+
+.form-field{
+    padding:0.8em;
+    border-radius:10px;
+    background:#171717;
+}
+
+.input-field{
+    width:100%;
+    background:none;
+    border:none;
+    outline:none;
+    color:white;
+}
+
+.sendMessage-btn{
+    padding:1em;
+    border-radius:10px;
+    border:none;
+    background:transparent;
+    color:#a38d8d;
+    outline:1px solid #6d0404;
+    cursor:pointer;
+}
+
+.sendMessage-btn:hover{
+    background:#dbd3d3;
+    color:black;
+}
 h1{
-    margin-bottom: 10px;
-    padding-bottom: 0;
+    font-size: 40px;
+    font-family: "Kavoon", serif;
+  font-weight: 400;
+  margin-bottom: 50px;
 }
-
-
-/* ================= MOBILE RESPONSIVE ================= */
-
+/* MOBILE */
 @media screen and (max-width:768px){
-
-    body{
-        overflow-x: hidden;
-    }
-
-    section{
-        width: 100%;
-        height: auto;
-    }
-
     header{
-        background-color: bisque;
-        width:105%;
-        height: 45px;
-        
-
+        height:auto;
+        border-radius:0;
+        flex-direction:column;
     }
-  header ul li{
-    list-style: none;
-    margin: 7px;
-    padding-top: 5px;
-}
 
-#banner img{
-    width: 400px;
-    transform: rotate(180);
-    transition: 2s;
+    header ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
 
-}
-.row{
-    flex-direction: column;
-}
+    .row{
+        flex-direction:column;
+    }
 
-#banner h3{
-    text-align: center;
-    font-size: medium;
-}
-#banner h1{
-        font-family: "Black Ops One", system-ui;
-        font-size: large;
-        padding-bottom: 20px;
-}
+    .row1{
+        flex-direction:column;
+        align-items:center;
+    }
 
+    #banner img,
+    #banner2 img{
+        width:90%;
+        margin:20px auto;
+    }
 
- .row1{
-        height: auto;
-        flex-direction: column;
+    #banner2 p{
+        width:90%;
+    }
+
+    #banner h1{
+        font-size:28px;
+    }
+
+    #banner h3{
+        font-size:18px;
+    }
+
+    #tech h1{
+        font-size:32px;
     }
 
     .col1{
-        width: 180px;
-        height: 180px;
-        margin: 15px;
-    }
-
-#tech i{
-        padding-top: 70px;
-    }
-
-    /* Projects */
-
-    
-
-    .col2{
-        margin: 10px;
-    }
-
-    /* Services */
-
-    #service img{
-        width: 150px;
-        height: 150px;
-        margin-left: 100px;
-    }
-
-    .col3{
-        width: 90%;
-        height: auto;
-        margin-bottom: 20px;
-    }
-
-    #service p{
-        text-align: center;
-        padding: 10px;
-    }
-
-    /* Contact */
-
-    #contact{
-        padding: 20px 10px;
+        width:90%;
+        max-width:280px;
     }
 
     .form-card1{
-        width: 90%;
-        max-width: 350px;
-    }
-
-    .form{
-        padding-inline: 1em;
-    }
-
-    .input-field{
-        font-size: 14px;
-    }
-
-    .sendMessage-btn{
-        margin-bottom: 20px;
-    }
-
-    /* Headings */
-
-    h1{
-        font-size: 24px;
-    }
-
-    h3{
-        font-size: 18px;
-    }
-
-    h4{
-        font-size: 16px;
+        width:90%;
     }
 }
