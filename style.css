@@ -350,54 +350,144 @@ h1{
 }
 /* MOBILE */
 @media screen and (max-width:768px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    section{
+        width: 100%;
+        height: auto;
+    }
+
+    /* Header */
     header{
-        height:auto;
-        border-radius:0;
-        flex-direction:column;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        border-radius: 0;
+        padding: 10px;
     }
 
     header ul{
-        flex-wrap:wrap;
-        justify-content:center;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
+    header ul li{
+        margin: 8px;
+    }
+
+    /* Banner */
     .row{
-        flex-direction:column;
+        flex-direction: column;
     }
 
-    .row1{
-        flex-direction:column;
-        align-items:center;
-    }
-
-    #banner img,
-    #banner2 img{
-        width:90%;
-        margin:20px auto;
-    }
-
-    #banner2 p{
-        width:90%;
+    #banner img{
+        width: 90%;
+        max-width: 300px;
+        margin: 20px auto;
     }
 
     #banner h1{
-        font-size:28px;
+        font-size: 28px;
     }
 
     #banner h3{
-        font-size:18px;
+        font-size: 18px;
     }
 
-    #tech h1{
-        font-size:32px;
+    #banner p{
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .btn-group{
+        flex-direction: column;
+        margin: 20px 0;
+        align-items: center;
+    }
+
+    /* About */
+    #banner2 img{
+        width: 90%;
+        max-width: 300px;
+    }
+
+    #banner2 p{
+        width: 90%;
+        font-size: 16px;
+        margin: auto;
+    }
+
+    /* Tech only */
+    #tech .row1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .col1{
-        width:90%;
-        max-width:280px;
+        width: 90%;
+        max-width: 280px;
+        height: auto;
+        min-height: 150px;
+    }
+
+    /* Projects */
+    #project .row1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flip-box{
+        width: 300px;
+        height: 200px;
+    }
+
+    /* Service */
+    #service .row1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .col3{
+        width: 90%;
+        max-width: 320px;
+        height: auto;
+        text-align: center;
+    }
+
+    #service img{
+        width: 150px;
+        height: 150px;
+        display: block;
+        margin: auto;
+    }
+
+    #service p{
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Contact */
+    #contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
     }
 
     .form-card1{
-        width:90%;
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .form{
+        width: 100%;
+        padding: 20px;
     }
 }
